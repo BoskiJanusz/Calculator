@@ -9,10 +9,11 @@ namespace MathLibrary
         if(k == 0 || k == n)
             return 1;
         k = std::min(k, n - k);
-        unsigned long long c = 1, d = 1;
+        unsigned long long c = 1;
         for(size_t i = 0; i < k; i++)
         {
-            c = (c * (n - i)) / (d * (k - i));
+            c *= (n - i);
+            c /= (i + 1);
         }
         return c;
     }
