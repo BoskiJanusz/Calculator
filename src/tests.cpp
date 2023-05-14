@@ -20,3 +20,13 @@ TEST(BinomialCoefficientTest, HandlesWrongSizeInput)
     EXPECT_THROW(MathLibrary::Theorem::BinomialCoefficient(1, 2), std::invalid_argument);
     EXPECT_THROW(MathLibrary::Theorem::BinomialCoefficient(5, 11), std::invalid_argument);
 }
+
+TEST(FactorialTest, HandlesPositiveInput)
+{
+    EXPECT_EQ(MathLibrary::Function::Factorial(0), 1);
+    EXPECT_EQ(MathLibrary::Function::Factorial(1), 1);
+    EXPECT_EQ(MathLibrary::Function::Factorial(2), 2);
+    EXPECT_EQ(MathLibrary::Function::Factorial(3), 6);
+    EXPECT_EQ(MathLibrary::Function::Factorial(5), 120);
+    EXPECT_EQ(MathLibrary::Function::Factorial(10), 3'628'800);
+}

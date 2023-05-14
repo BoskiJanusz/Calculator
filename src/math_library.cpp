@@ -22,4 +22,14 @@ namespace MathLibrary
         }
         return c;
     }
+    unsigned long long Function::Factorial(size_t n)
+    {
+        unsigned long long temp = 1;
+        while(n)
+        {
+            temp *= n;
+            --n;
+        }
+        return temp;
+    }
 }
